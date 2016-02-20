@@ -16,7 +16,9 @@
   "scripts": {
     "gen-sample": "cordova create my-sample-app --template=./template",
     "add-tests": "cd my-sample-app && cordova plugin add .. ../tests --save",
-    "run-sample": "cd my-sample-app && cordova prepare && cordova run"
+    "run-sample": "cd my-sample-app && cordova prepare && cordova run",
+    "test-android": "cordova-paramedic --platform android --plugin ./ --verbose",
+    "test-ios": "cordova-paramedic --platform ios --plugin ./ --verbose"
   },
   "author": "Vladimir Kotikov",
   "license": "MIT",
@@ -25,6 +27,7 @@
   },
   "homepage": "https://github.com/vladimir-kotikov/my-awesome-plugin#readme",
   "devDependencies": {
-    "cordova": "^6.0.0"
+    "cordova": "^6.0.0",
+    "cordova-paramedic": "^0.5.0"
   }
 }
